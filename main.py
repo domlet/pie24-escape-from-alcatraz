@@ -4,6 +4,18 @@ servo = "4_1833482520634428295"
 servo_status = 0
 arm_position = 0
 
+def autonomous():
+    autonomous_setup()
+    while True:
+        autonomous_main()
+# start 2025 snippet to translate 2024 code to 2025
+# from Discord: https://discord.com/channels/754768729132498994/950527830800871455/1367264392915456040
+def teleop():
+    teleop_setup()
+    while True:
+        teleop_main() 
+# end 2025 snippet
+
 def full_speedahead(lv,rv):
     PWR = 10
     Robot.set_value(drive_motor, "velocity_a", -lv * PWR)
